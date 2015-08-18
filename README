@@ -1,3 +1,5 @@
 This Folder contains two of the more complex assignments I had to complete in my Nature Inspired Computation class. I chose to present these because they involved implementing advanced algorithms, required performing a large number of tests in order to determine optimal configurations, and the results had to be compiled into short reports. The assignments were completed in groups of three (nearly all my assignments in College were in groups of 2 or 3).
 
 Unfortunately, the Evolutionary Algorithms cannot be run without the input files which are not present currently, but the 'Data and Charts' Excel and the 'Report' word document contains charts and explanations of all the tests we ran. The PSO algorithm can be run, however all the possible results can be found in the 'tables' pdf.
+
+The Neural Networks Report contains a full length CS paper on a Neural Network we built and tested to solve the MAXSAT problem.
