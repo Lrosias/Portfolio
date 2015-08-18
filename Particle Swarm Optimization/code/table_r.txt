@@ -1,0 +1,52 @@
+# figure out how to extract rows
+# 
+library(xtable)
+setwd("Desktop/local cs stuff/NIC 4/src/moreoutputs")
+
+folder_list <- list.files()
+for (i in 1:20) { # change here
+	setwd(folder_list[i])
+	# data
+	file_list <- list.files()
+	data <- list()
+	for (i in 1:16) { # change here
+		data[i] = read.table(file_list[i], header = TRUE)
+	}
+	matrix <-matrix(unlist(data), ncol = length(file_list))
+	colnames(matrix) <- unlist(file_list)
+	rownames(matrix) <- c("average", "stddev")
+	for (i in 1:2) {
+		table1 <- xtable(matrix[ , 1:4])
+		table2 <- xtable(matrix[ , 5:8])
+		table3 <- xtable(matrix[ , 9:12])
+		table4 <-xtable(matrix[ , 13:16])
+	}
+	# print multiple tables by breaking up the matrix
+	# also shorten column names?
+	setwd("../")
+	print.xtable(table1, type = "latex", file = paste("tables.tex"), append = TRUE)
+	print.xtable(table2, type = "latex", file = paste("tables.tex"), append = TRUE)
+	print.xtable(table3, type = "latex", file = paste("tables.tex"), append = TRUE)
+	print.xtable(table4, type = "latex", file = paste("tables.tex"), append = TRUE)
+}
+
+
+\documentclass{article}
+\usepackage[margin=2.5cm]{geometry}
+\renewcommand\floatpagefraction{.9}
+\setcounter{totalnumber}{4}
+\begin{document}
+stuff
+\end{document}
+
+replace all \begin{tabular}{rrrrr} with \begin{tabular}{p{2cm}p{2cm}p{2cm}p{2cm}p{2cm}}
+
+put \clearpage between every four tables
+
+also figure out how to label each set of tables
+
+put \centering at the beginning of the document
+
+\bf Optimizing the [Ackley] function with swarm size = [100]
+\par
+\par

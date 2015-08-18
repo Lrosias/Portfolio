@@ -1,0 +1,22 @@
+@authors Richardo Hopkins, Amy Sham, and Luis Rosias
+
+To run the program, refer to the MaxSatTester comment at the top.
+
+Quick instructions :
+
+ * Examples :
+ * =====================
+ * - Genetic Algorithm -
+ * =====================
+ * 
+ * $ java MaxSatTester swag.cnf 100 bs 1c 0.7 0.01 1000 g
+ * 
+ * =========
+ * - PBIL -
+ * =========
+ * 
+ * $ java MaxSatTester yolo.cnf 150 0.1 0.075 0.02 0.05 1000 p
+
+The current source code has all the informative/debug print statements removed. If you would like me to put them back in, let me know and I'll email you a copy with the added print statements.
+
+Also, attached is a file called "my.py". This python script will run the command over a bunch of individuals and a bunch of generations, and generate log files with the outputs. The file is hardcoded, as well as the variables to iterate over, but you can easily adapt it to your needs! Well, not TOO easily, but I have faith in you. ;]

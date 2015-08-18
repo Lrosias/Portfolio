@@ -1,0 +1,386 @@
+print(sample[1:25])
+for (i in 1:100) {
+sample <- rnorm(25, 0, 1)
+print(sample[1:25])
+}
+> for (i in 1:100) {#
++ sample <- rnorm(25, 0, 1)#
++ print(iqr(sample, na.rm = false)/135)#
++ }
+for (i in 1:100) {#
+sample <- rnorm(25, 0, 1)#
+print(iqr(sample, na.rm = false)/135)#
+}
+for (i in 1:100) {#
+sample <- rnorm(25, 0, 1)#
+print(IQR(sample, na.rm = false)/135)#
+}
+for (i in 1:100) {#
+sample <- rnorm(25, 0, 1)#
+print(IQR(sample)/135)#
+}
+for (i in 1:100) {#
+sample <- rnorm(25, 0, 1)#
+print(sd(sample)/135)#
+}
+test1 <- for (i in 1:100) {#
+sample <- rnorm(25, 0, 1)#
+print(IQR(sample)/135)#
+}
+print(test1)
+test1 <<- list(1...1000)
+test1 <- list()
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+print(sd(sample)/135)#
+}
+test1 <- list()
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+result[i] <-sample[i]#
+}
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+list[i] <-sample[i]#
+}
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test1[i] <-sample[i]#
+}
+print(test1)
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test1[i] <-sd(sd(sample))#
+}
+print(test1)
+test1 <- list()
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test1[i] <-sd(sample)#
+}
+print(test1)
+summary(test1)
+mean(test1)
+unlist(test1)
+print(test1)
+summary(unlist(test1))
+test2 <- list()
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test2[i] <- (IQR(sample)/135)#
+}
+summar(unlist(test2))
+summary(unlist(test2))
+test1 <- list()
+for (i in 1:1000) {}
+for (i in 1:1000) {
+sample <- rnorm(25, 0, 1)
+test1[i] <- sd(sample)
+}
+summary(unlist(test1))
+4/135
+unlist(test1)
+unlist(test2)
+summary(unlist(test1))
+test2 <- list()
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test2[i] <- IQR(sample)/135#
+}
+print(unlist(test2))
+> for (i in 1:1000) {#
++ sample <- rnorm(25, 0, 1)#
++ test2[i] <- sd(sample)#
++ }
+> for (i in 1:1000) {#
++ sample <- rnorm(25, 0, 1)#
++ test2[i] <- sd(sample)}
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test2[i] <- sd(sample)#
+}
+print(unlist(test2))
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test2[i] <- IQR(sample)/1.35#
+}
+summary(unlist(test2))
+summary(unlist(test1))
+hist(test1)
+hist(unlist(test1))
+hist(unlist(test2))
+hist(unlist(test1))
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test2[i] <- sd(sample)#
+}
+hist(unlist(test2))
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test2[i] <- IQR(sample)/1.35#
+}
+hist(unlist(test2))
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test1[i] <- sd(sample)#
+}
+hist(unlist(test1))
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test2[i] <- IQR(sample)/1.35#
+}
+hist(unlist(test2))
+summary(unlist(test1))
+summary(unlist(test2))
+test3 <- vector()
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test3[i] <- IQR(sample)/1.35#
+}
+summary(test3)
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test3[i] <- IQR(sample)/1.35#
+}
+summary(test3)
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test3[i] <- IQR(sample)/1.35#
+}
+summary(test3)
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test3[i] <- IQR(sample)/1.35#
+}
+summary(test3)
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test3[i] <- IQR(sample)/1.35#
+}
+summary(test3)
+test1 <- vector()
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test1[i] <- sd(sample)#
+}
+summary(test1)
+test2 <- vector()
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test2[i] <- IQR(sample)/1.35#
+}
+summary(test2)
+hist(test1)
+hist(test2)
+> test1 <- vector()#
+> for (i in 1:1000) {#
++ sample <- rnorm(25, 0, 1)#
++ test1[i] <- sd(sample)#
++ }#
+> hist(test1)#
+> summary(test1)
+test1 <- vector()
+for (i in 1:1000) {#
++ sample <- rnorm(25, 0, 1)#
++ test1[i] <- sd(sample)#
++ }
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test1[i] <- sd(sample)#
+}
+hist(test1)
+summary(test1)
+print(summary(test1))
+test2 <- vector()
+for (i in 1:1000) {#
++ sample <- rnorm(25, 0, 1)test2[i] <- IQR(sample)/1.35#
+}
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test2[i] <- IQR(sample)/1.35#
+}
+hist(test2)
+summary(test2)
+hist(test2)
+hist(test1)
+test1
+test2
+print(test2)
+print(sample)
+for (i in 1:1000) {#
+sample <- rnorm(25, 0, 1)#
+test2[i] <- IQR(sample)/1.35#
+}
+print(sample)
+getwd()
+setcd(/Users/amysham/Desktop)
+setwd(~/Desktop/local cs stuff/NIC 3/ACOTSP-1.02/backup april 7th/r test)
+setwd(/Desktop/local cs stuff/NIC 3/ACOTSP-1.02/backup april 7th/r test)
+setwd(Desktop/local cs stuff/NIC 3/ACOTSP-1.02/backup april 7th/r test)
+setwd("/Desktop/local cs stuff/NIC 3/ACOTSP-1.02/backup april 7th/r test")
+data <- c(26.8, 17.7, 13.7, 4.0, 30.3, 23.2, 28.3, 19.0, 27.5, 20.8)
+print(data)
+count(data)
+length(data)
+sort(data, decreasing = FALSE)
+for (i in 1:10) {}
+for (i in 1:10) {
+}
+labels <- c()
+print(labels)
+for (i in 1:10) {
+append(labels, i)
+}
+print(labels)
+for (i in 1:10) {#
+	append(labels, i)#
+}
+print(labels)
+append(labels, 1)
+labels
+labels <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+print(labels)
+quantiles <- -(ln(1-(labels/(length(labels)+1))))(1/3)
+quantiles <- -(log(1-(labels/(length(labels)+1))))(1/3)
+quantiles <- c()
+quantiles <- -(log(1-(labels/(length(labels)+1))))(1/3)
+quantiles <- -(log(1-(labels/11)))^(1/3)
+quantiles
+labels
+quantiles
+quantiles <- labels
+quantiles
+quantiles <- quantiles/2
+quantiles
+quantiles <- quantiles*2
+quantiles <- -(log(1-(quantiles/11)))^(1/3)
+quantiles
+quantiles <- labels
+quantiles <- (log(1-(quantiles/11))
+quantiles
+quantiles <- (log(1-(quantiles/11))
+quantiles
+quantiles <- labels
+quantiles
+quantiles <- (log(1-(quantiles/11))-q
+}
+quantiles
+-(log(1-quantiles/11))^(1/3)
+quantiles -> labels
+log(quantiles)
+esp(quantiles)
+exp(quantiles)
+quantiles <- labels
+quantiles/11
+quantiles
+quantiles <- quantiles/11
+quantiles
+quantiles <- 1-quantiles
+quantiles
+quantiles <- log(quantiles)
+quantiles
+quantiles <- quantiles^(1/3)
+quantiles
+quantiles <- labels
+quantiles <- log(1-quantiles/11)
+quantiles
+quantiles <- (quantiles + 0i)^(1/3)
+quantiles
+quantiles <- -quantiles
+quantiles
+quantiles <- labels
+quantiles <- (-log(1-quantiles/11))^(1/3)
+quantiles
+data
+data <- sort(data, descending = FALSE)
+data <- sort(data, descreasing = FALSE)
+data <- sort(data, decreasing = FALSE)
+data
+plot(quantiles, data)
+quantiles
+abline(res)
+res = lm(data~quantiles)
+res
+abline(res)
+?lm
+data
+data <- c(26.8, 17.7, 13.7, 4, 30.3, 32.3, 28.3, 19, 27.5, 20.8)
+data <- sort(data, decreasing = FALSE)
+plot(quantiles, data)
+abline(res)
+res
+res = lm(formula = data ~ quantiles)
+res
+?print
+print.table(res)
+timeForFailure <- data
+res = lm(formula = timeForFailure ~ quantiles)
+res
+plot(quantiles, timeForFailure)
+abline(res)
+data
+quantiles
+res
+lm(formula = data ~ quantiles)
+data <- c(26.8, 17.7, 13.7, 4.0, 30.3, 32.2, 38.3, 19, 27.5, 20.8)
+data <- sort(data, decreasing = FALSE)
+lm(formula = data ~ quantiles)
+quantiles
+quantiles <- labels
+quantiles
+quantiles <- (-log(1-(quantiles/11)))^(1/3)
+quantiles
+data
+data <-c(4.0, 13.7, 17.7, 19.0, 20.8, 26.8, 27.5, 30.3, 32.2, 28.3)
+data <- sort(data, decreasing = FALSE)
+lm(formula = data ~ quantiles)#
+res
+quantiles <- labels
+quantiles <- 1-(quantiles/11)
+quantiles
+quantiles <- -log(quantiles)
+quantiles <- quantiles^(1/3)
+quantiles
+plot(quantiles, data)
+abline(res)
+res
+?plot
+plot(quantiles, data, xlim = c(0, 1.2))
+abline(res)
+plot(quantiles, data, xlim = c(0, 1.2), ylim = c(0, 35))
+abline(res)
+plot(quantiles, data, xlim = c(0, 1.2), ylim = c(-5, 35))
+abline(res)
+plot(quantiles, data, xlim = c(0, 1.2), ylim = c(-5, 35))
+abline(res)
+res
+library(RColorBrewer)
+setwd("Desktop/local cs stuff/NIC 4/src/outputs")
+colors <- brewer.pal(16, "Accent") # some color package#
+pal <- colorRampPalette(colors)#
+# use this : pal(16)#
+#
+folder_list <- list.files()#
+for (i in 1:20) { # change here#
+	setwd(folder_list[i])#
+	# data#
+	file_list <- list.files()#
+	data <- list()#
+	for (i in 1:16) { # change here#
+		data[i] = read.table(file_list[i], header = TRUE)#
+	}#
+	matrix <-matrix(unlist(data), ncol = length(file_list))#
+	colnames(matrix) <- unlist(file_list)#
+	x_values <- 1:20#
+	range <- range(matrix)#
+	legend_names <- colnames(matrix)#
+#
+	# graphics#
+	quartz(width = 9, height = 7, pointsize = 10)#
+	png(filename = paste(getwd(), ".png", sep = ""), width = 960, height = 648)#
+	par(mar=c(5.1, 5.1, 4.1, 18.1), xpd=TRUE)#
+	matplot(x_values, matrix, type = "l", col = pal(16), ylim = c(0, range[2]), xlab = "(Iteration #)/100", ylab = "Function Value", main = "Function Value vs. Iteration #", lty = 1, lwd = 3)#
+	legend(21, range[2], legend_names, fill = pal(16), bty = "n") # change here#
+	dev.off()#
+	setwd("../")#
+}

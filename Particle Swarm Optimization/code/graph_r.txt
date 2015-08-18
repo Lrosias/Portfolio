@@ -1,0 +1,28 @@
+colors <- brewer.pal(16, "Accent") # some color package
+pal <- colorRampPalette(colors)
+# use this : pal(16)
+
+folder_list <- list.files()
+for (i in 1:20) { # change here
+	setwd(folder_list[i])
+	# data
+	file_list <- list.files()
+	data <- list()
+	for (i in 1:16) { # change here
+		data[i] = read.table(file_list[i], header = TRUE)
+	}
+	matrix <-matrix(unlist(data), ncol = length(file_list))
+	colnames(matrix) <- unlist(file_list)
+	x_values <- 1:20
+	range <- range(matrix)
+	legend_names <- colnames(matrix)
+
+	# graphics
+	quartz(width = 9, height = 7, pointsize = 10)
+	png(filename = paste(getwd(), ".png", sep = ""), width = 960, height = 648)
+	par(mar=c(5.1, 5.1, 4.1, 18.1), xpd=TRUE)
+	matplot(x_values, matrix, type = "l", col = pal(16), ylim = c(0, range[2]), xlab = "(Iteration #)/100", ylab = "Function Value", main = "Function Value vs. Iteration #", lty = 1, lwd = 3)
+	legend(21, range[2], legend_names, fill = pal(16), bty = "n") # change here
+	dev.off()
+	setwd("../")
+}
