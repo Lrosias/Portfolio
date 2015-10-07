@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <title>Explore the World!</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+#floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+      #floating-panel {
+        margin-left: -100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="floating-panel">
+      <input type="button" value="Go to Street View" onclick="toggleStreetView();"></input>
+    </div>
+    <div id="map"></div>
+
+    <script>
+//Set timeout to 1 so the script continues and the page can load while the alert is visible.
+setTimeout("alert('Hi! It is time to go on a Virtual Vacation! Click on the destinations you would like to visit. Safe travels!');", 1);
+var panorama;
+var locations = [];
+locations.push({lat: 32.347056, lng: -64.649778}, {lat: 40.607939, lng: 140.459811}, {lat: 26.625711, lng: -111.813111}, {lat: 36.065096, lng:-112.137107},
+                {lat: -0.830222, lng: -91.164393}, {lat: 46.738087, lng: 10.836028}, {lat: 58.270353, lng: 27.435986}, {lat: 38.8977664, lng:-77.0365038},
+                {lat: 22.280114, lng: 114.117322}, {lat: -23.442747, lng: 151.906639}, {lat: -77.5542751, lng: 166.1616476}, {lat: 28.002726, lng: 86.852628},
+                {lat: 38.331075, lng: 138.485681}, {lat: 33.000908, lng: 130.951547}, {lat: 36.732583, lng: 138.462081}, {lat: 48.8045405,lng: 2.1201304},
+                {lat: -0.778639, lng: -89.519567}, {lat: 67.948611, lng: 18.082703}, {lat: 37.407747, lng: 140.500161}, {lat: 41.890072, lng: 12.4925342},
+                {lat: 43.026294, lng: 17.032375}, {lat: 61.068300, lng: 5.803028}, {lat: 23.442875, lng: 151.906586}, {lat: 54.515811, lng: -3.206475},
+                {lat:38.7877267, lng:-9.3906201}, {lat: 51.1788898, lng:-1.8262146});
+  
+
+function initMap() {
+  //just picked one of the locations
+  var defaultLocation = {lat: 32.347056, lng: -64.649778};
+
+  // Set up the map
+  var map = new google.maps.Map($('#map')[0], {
+    center: defaultLocation,
+    mapTypeId: google.maps.MapTypeId.SATELLITE,
+    zoom: 3,
+    streetViewControl: true
+  });
+
+  createMarkers(locations, map);
+
+  //get default panorama and set up some default values
+  panorama = map.getStreetView();
+  panorama.setPosition(defaultLocation);
+  panorama.setPov({
+    heading: 265,
+    pitch: 0
+  });
+}
+
+//switch back and forth between streetView and World Map
+function toggleStreetView() {
+  var toggle = panorama.getVisible();
+  if (toggle == false) {
+    panorama.setVisible(true);
+    $('#floating-panel :input').val("Return to World Map");
+  } else {
+    panorama.setVisible(false);
+    $('#floating-panel :input').val("Go to Street View");
+  }
+}
+
+//populates all the markers based on the given coordinates
+function createMarkers(coordinates, map){
+  var markers = [];
+
+    for(count = 0; count < coordinates.length; count++){
+      markers.push(new google.maps.Marker({
+      position: coordinates[count],
+      map: map,
+    }));
+    setupMarkerListener(markers[count]);
+  }
+}
+
+function setupMarkerListener(marker){
+  //when we click a marker we want to be sent into streetView at that location
+  marker.addListener('click', function(){
+    marker.getMap().getStreetView().setPosition(marker.getPosition());
+    toggleStreetView();
+  });
+}
+
+    </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrskeB0KayDVFj2gfe-JvERJoUOEy2INM&signed_in=true&callback=initMap"
+        async defer>
+    </script>
+  </body>
+</html>
